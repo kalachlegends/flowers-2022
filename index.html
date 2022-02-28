@@ -1,0 +1,175 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Привет SASS(SCSS)!</title>
+	<!-- Подключаем CSS -->
+	<link
+	rel="stylesheet"
+	href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+	/>
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- Кодировка страницы -->
+    <meta name='viewport' content='width=device-width,initial-scale=1'/>
+    <meta content='true' name='HandheldFriendly'/>
+    <meta content='width' name='MobileOptimized'/>
+    <meta content='yes' name='apple-mobile-web-app-capable'/>
+    
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+<!-- Отображаемое тело страницы -->
+<body>
+<header class="header">
+	<div class="wrapper">
+		<div class="container">
+			<div class="header__body">
+
+				<div class="header__body-telephone">	
+					<div class="header__telephone">
+						<a href="#">
+							<img src="img/icons/telephone-fill.svg" class="header__icon" alt="">
+							<span class="header__number">+7 700 411 35 70</span>
+						</a>
+					</div>
+					<span class="line"></span>
+					<div class="header__telephone">
+						<a href="#">
+							<img src="img/icons/whatsapp-fill.svg" class="header__icon" alt="">
+							<span class="header__number">+7 700 411 35 70</span>
+						</a>
+					</div>
+			
+				<div class="header__time">
+					<img src="img/icons/time-five.svg" class="header__icon" alt="">
+					<span class="header__time-text">Доставка с 9:00 до 22:00 </span>
+				</div>
+					</div>
+				<a href="#">
+					<div class="header__button">
+						<div class="header__iconbutton">
+							<img src="img/icons/phone-return.svg" class="header__icon" alt="">
+						</div>
+						<a href="#" class="header__bt-text  bt-text">Обратный звонок </a>
+					</div>  
+				</a>
+				<a href="#">
+					<div class="header__button">
+						<div class="header__iconbutton">
+							<img src="img/icons/building-home-16-filled.svg" class="header__icon" alt="">
+						</div>
+						<a href="#" class="header__bt-text bt-text">Выберите город</a>
+					</div>  
+				</a>
+				<a href="#">
+					<div class="header__user">
+						<div class="header__user">
+							<img src="img/icons/carbon_user-avatar-filled-alt.svg" class="header__icon" alt="">
+						</div>
+						<a href="#" class="header__text-user us-text">Войти</a>
+					</div>  
+				</a>
+			</div>
+		</div>
+	</div>
+</header><nav class="nav " id="navbar">	
+	<div class="wrapper" >	
+		<div class="container" >	
+			<div class="nav__body">	
+					<div class="nav__logo-container">
+						<a href="index.html" class="nav__logo-container">
+							<div class="nav__logo">	
+								<img src="img/icons/logo-flowers.png" alt="">	
+							</div>
+							<div class="nav__logo-text">	
+								<span class="nav__logo-text-style">Цветы у мамочки</span>
+							</div>
+						</a>
+					</div>
+					<div class="nav__main-container">
+						<ul class="nav__list">
+							<li class="list-item"><a href="#" class="link-item">Главная</a></li>
+							<li class="list-item"><a href="#" class="link-item">Магазин</a></li>
+							<li class="list-item"><a href="#" class="link-item">Блок</a></li>
+							<li class="list-item"><a href="#" class="link-item">О нас</a></li>
+							<li class="list-item"><a href="#" class="link-item">Доставка и оплата</a></li>
+							<li class="list-item"><a href="#" class="link-item">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="nav__shop-block">
+						<div class="nav_shop-icon">
+							<a href="">
+								<img src="../img/icons/bi_bag.svg" alt="">
+							</a>
+						</div>
+						<div class="nav_shop-icon">
+							<a href="">
+								<img src="../img/icons/bi_suit-heart.svg" alt="">
+							</a>
+						</div>
+						<div class="nav_shop-icon">
+							<a href="">
+								<img src="../img/icons/clarity_search-line.svg" alt="">
+							</a>
+						</div>
+					</div>
+				
+			</div>
+		</div>	
+	</div>
+</nav>
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+        <div class="wrapper">
+            <div class="container">
+                <div class="slider__body">
+                   <div class="slider_column"> 
+                    <div class="slider__text">
+                       Красивые букеты 
+                       24/7
+                   </div>
+                   <a href=""><div class="slider__button"><span>Купить</span></div></a>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="swiper-slide"><div class="wrapper">
+    <div class="container">
+        <div class="slider__body">
+           <div class="slider_column"> 
+            <div class="slider__text">
+              Доставка по всему городу
+           </div>
+           <a href=""><div class="slider__button"><span>Заказать</span></div></a>
+       </div>
+   </div>
+</div>
+</div></div>
+<div class="swiper-slide"><div class="wrapper">
+    <div class="container">
+        <div class="slider__body">
+           <div class="slider_column"> 
+            <div class="slider__text">
+               Тюльпаны по скидки на 8 марта
+           </div>
+           <a href=""><div class="slider__button"><span>Приобрести</span></div></a>
+       </div>
+   </div>
+</div>
+</div></div>
+</div>
+</div>
+
+
+		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="js/main.js"> </script>
+
+</body>
+</html>

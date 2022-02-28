@@ -1,0 +1,35 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Привет SASS(SCSS)!</title>
+	<!-- Подключаем CSS -->
+	<link
+	rel="stylesheet"
+	href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+	/>
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- Кодировка страницы -->
+    <meta name='viewport' content='width=device-width,initial-scale=1'/>
+    <meta content='true' name='HandheldFriendly'/>
+    <meta content='width' name='MobileOptimized'/>
+    <meta content='yes' name='apple-mobile-web-app-capable'/>
+    
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+<!-- Отображаемое тело страницы -->
+<body>
+	<!--@import "header.html-->
+	<!--@import "nav.html-->
+
+		<!--@import "slider.html-->
+		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="js/main.js"> </script>
+
+</body>
+</html>
