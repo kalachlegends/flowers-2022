@@ -74,6 +74,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+@font-face {
+  font-family: "Drina";
+  src: url("../fonts/Drina.eot");
+  src: url("../fonts/Drina.eot?#iefix") format("embedded-opentype"), url("../fonts/Drina.woff2") format("woff2"), url("../fonts/Drina.woff") format("woff"), url("../fonts/Drina.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   min-height: 100%;
   font-family: "Montserrat", sans-serif;
@@ -102,6 +110,38 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 1100px) {
+  .header {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    left: -100%;
+    top: 0%;
+    width: 50%;
+    height: 100%;
+    z-index: 111121;
+    background: rgba(253, 249, 249, 0.9);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+  }
+  .header.active {
+    left: 0%;
+  }
+}
+.header a {
+  color: #000;
+}
 .header__body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
@@ -113,10 +153,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.5s ease 0.3s;
+  -o-transition: all 0.5s ease 0.3s;
+  transition: all 0.5s ease 0.3s;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+}
+@media (max-width: 1100px) {
+  .header__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
 }
 .header__body-telephone {
   display: -webkit-box;
@@ -126,13 +180,38 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 1100px) {
+  .header__body-telephone {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+}
 .header__telephone a {
+  color: black;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.header__telephone a:hover {
+  fill: #A57B78;
+  color: #A57B78;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 .header__number {
   font-size: 16px;
@@ -152,9 +231,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 29px;
-  border: 1px solid black;
-  padding: 1%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid #A57B78;
+  height: 32px;
+  width: 110%;
+  fill: #A57B78;
+  color: #A57B78;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -163,8 +247,23 @@ body {
           justify-content: center;
   border-radius: 50px;
 }
+.header__button:hover {
+  border: 1px solid #A57B78;
+  background: #A57B78;
+  fill: white;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: white;
+}
+.header__bt-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
 .header__iconbutton {
   margin-right: 5px;
+  margin-left: 5px;
 }
 .header__user {
   display: -webkit-box;
@@ -174,6 +273,15 @@ body {
 .header__text-user {
   margin-left: 5px;
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .line {
@@ -191,11 +299,12 @@ body {
   width: 100%;
   z-index: 100000;
 }
-
 .nav {
   border: 1px solid #E9E9E9;
   background: rgba(253, 249, 249, 0.9);
   padding: 8px 0px;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+          backdrop-filter: saturate(180%) blur(20px);
 }
 .nav_shop-icon {
   margin-left: 6px;
@@ -225,12 +334,40 @@ body {
           flex-direction: row;
 }
 .nav__logo-container a {
+  font-family: "Drina";
+  font-size: 22px;
   color: #000;
 }
+.nav__svg-hover-icon svg {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.nav__svg-hover-icon svg:hover {
+  fill: #A57B78;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
 .nav__logo {
+  position: relative;
+  padding: 18%;
   margin-right: 6px;
 }
+.nav__logo img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .nav__logo-text {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,6 +375,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-weight: bold;
+}
+.nav__logo-text-style {
+  text-align: center;
 }
 .nav__main-container {
   -webkit-box-flex: 1;
@@ -258,14 +398,106 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+.nav .sub-svg {
+  position: relative;
+  -webkit-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  stroke: black;
+}
+.nav .sub-svg svg {
+  position: absolute;
+  top: 2px;
+  left: 108%;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.nav .sub-svg:hover {
+  ransition: all 0.4s ease;
+  stroke: #A57B78;
+}
+.nav .sub-svg:hover svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
 .nav .list-item {
+  position: relative;
   margin-left: 29px;
 }
 .nav .list-item a {
+  -webkit-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  font-weight: bold;
   color: #000;
+}
+.nav .list-item a:hover {
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #A57B78;
 }
 .nav .link-item {
   font-weight: 300;
+}
+.nav .active:before {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  bottom: 9.5px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.nav .active:after {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  top: 9.5px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.nav__burger {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .nav__burger {
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    margin-left: 6px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  .nav__burger:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    background: #4d4959;
+    height: 1.5px;
+    left: 0;
+    top: 25%;
+  }
+  .nav__burger:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    background: #4d4959;
+    height: 1.5px;
+    left: 0;
+    bottom: 25%;
+  }
 }
 
 .sticky + .swiper {
@@ -278,7 +510,7 @@ body {
 /*nav-end-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 .swiper {
   width: 100%;
-  height: 70%;
+  height: 85%;
   min-height: 40%;
 }
 
@@ -364,4 +596,19 @@ body {
   transition: 0.3s;
   -webkit-box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.15);
+}
+
+.close {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  background: #000;
+}
+@media (min-width: 1100px) {
+  .close {
+    display: none;
+  }
 }
