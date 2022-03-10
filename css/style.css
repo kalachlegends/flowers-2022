@@ -339,6 +339,13 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 1100px) {
+  .nav__body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .nav__logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -347,6 +354,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .nav__logo-container a {
   font-family: "Drina";
@@ -402,6 +412,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+@media (max-width: 800px) {
+  .nav__list {
+    display: none;
+  }
 }
 .nav__shop-block {
   display: -webkit-box;
