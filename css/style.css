@@ -308,6 +308,7 @@ body {
   z-index: 100000;
 }
 .nav {
+  width: 100%;
   position: sticky;
   border: 1px solid #E9E9E9;
   background: rgba(253, 249, 249, 0.9);
@@ -357,6 +358,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media (max-width: 800px) {
+  .nav__logo-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
 }
 .nav__logo-container a {
   font-family: "Drina";
@@ -422,6 +430,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.nav__shop-block .nav__burger {
+  display: block;
+}
+@media (max-width: 800px) {
+  .nav__shop-block .nav__burger {
+    display: none;
+  }
 }
 .nav .sub-svg {
   position: relative;
@@ -711,6 +727,15 @@ body {
   }
 }
 
+.nav__burger-view {
+  display: none;
+}
+@media (max-width: 800px) {
+  .nav__burger-view {
+    display: block;
+  }
+}
+
 /*slider-end-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*mobile-start-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 .mobile {
@@ -733,14 +758,30 @@ body {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
             backdrop-filter: saturate(180%) blur(20px);
   }
+}
+@media (max-width: 1100px) and (max-width: 650px) {
+  .mobile {
+    width: 75%;
+  }
+}
+@media (max-width: 1100px) {
   .mobile.active {
     left: 0%;
   }
 }
 .mobile__list {
-  margin-top: 10px;
   position: relative;
   font-size: 20px;
+}
+.mobile__list li {
+  position: relative;
+}
+.mobile__list li img {
+  position: absolute;
+  left: 6px;
+  width: 21px;
+  height: 21px;
+  top: 24%;
 }
 .mobile__list li a {
   -webkit-transition: all 0.2s ease;
@@ -750,7 +791,7 @@ body {
   display: block;
 }
 .mobile__list li a:first-child {
-  padding: 10px 20px;
+  padding: 10px 33px;
 }
 .mobile__list li a:hover {
   background-color: rgba(7, 30, 31, 0.01);
@@ -793,4 +834,67 @@ body {
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+@media (max-width: 768px) {
+  .mobile__body .sub-svg svg {
+    left: 92%;
+  }
+}
+@media (max-width: 500px) {
+  .mobile__body .sub-svg svg {
+    left: 88%;
+  }
+}
+.mobile__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile__head-container {
+  padding: 15px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.mobile__close {
+  margin-left: 10px;
+}
+.mobile__logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.mobile__logo-text {
+  font-family: "Drina";
+  font-family: "Drina";
+  font-size: 22px;
+  color: #000;
+  line-height: 22px;
+  font-weight: 600;
 }
