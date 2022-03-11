@@ -101,6 +101,12 @@ body {
   margin-left: 30px;
   height: 100%;
 }
+@media (max-width: 346px) {
+  .wrapper {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
 
 .container {
   max-width: 1890px;
@@ -222,6 +228,11 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+@media (max-width: 1100px) {
+  .header__telephone {
+    margin-bottom: 10px;
+  }
+}
 .header__number {
   font-size: 16px;
   font-weight: 500;
@@ -229,12 +240,29 @@ body {
   letter-spacing: 0em;
   padding: 0px 3px 0px 3px;
 }
+@media (max-width: 1100px) {
+  .header__number {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
 .header__time {
   margin-left: 12px;
+}
+@media (max-width: 1100px) {
+  .header__time {
+    margin-left: 0px;
+  }
 }
 .header__time-text {
   font-weight: bold;
   margin-left: 5px;
+}
+@media (max-width: 1100px) {
+  .header__time-text {
+    margin-left: 2px;
+    font-weight: normal;
+  }
 }
 .header__button {
   display: -webkit-box;
@@ -255,6 +283,24 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 50px;
+}
+@media (max-width: 1100px) {
+  .header__button {
+    min-width: 50%;
+    max-width: 60%;
+  }
+}
+@media (max-width: 650px) {
+  .header__button {
+    min-width: 50%;
+    max-width: 40%;
+  }
+}
+@media (max-width: 420px) {
+  .header__button {
+    min-width: 100%;
+    max-width: 60%;
+  }
 }
 .header__button:hover {
   border: 1px solid #A57B78;
@@ -371,6 +417,11 @@ body {
   font-size: 22px;
   color: #000;
   line-height: 22px;
+}
+@media (max-width: 346px) {
+  .nav__logo-container a {
+    font-size: 18px;
+  }
 }
 .nav__svg-hover-icon svg {
   -webkit-transition: 0.3s;
@@ -536,6 +587,7 @@ body {
   -o-transition: 0.2s;
   transition: 0.2s;
   bottom: 9.5px;
+  width: 21px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -545,6 +597,7 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
   top: 9.5px;
+  width: 21px;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -563,8 +616,8 @@ body {
     transition: 0.5s;
     margin-left: 6px;
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 21px;
   }
   .nav__burger:after {
     -webkit-transition: all 0.5s ease;
@@ -606,7 +659,11 @@ body {
   height: 85%;
   min-height: 40%;
   z-index: 1;
-  position: sticky;
+}
+@media (max-width: 420px) {
+  .swiper {
+    height: 60%;
+  }
 }
 
 .swiper-slide {
@@ -674,6 +731,12 @@ body {
   color: #484241;
   margin-bottom: 10px;
 }
+@media (max-width: 750px) {
+  .slider__text {
+    font-size: 8vw;
+    line-height: 69px;
+  }
+}
 .slider__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -698,6 +761,12 @@ body {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
+@media (max-width: 750px) {
+  .slider__button span {
+    padding: 10px 30px;
+    font-size: 3.7vw;
+  }
 }
 .slider__button span:hover {
   -webkit-transition: 0.3s;
@@ -771,7 +840,7 @@ body {
 }
 .mobile__list {
   position: relative;
-  font-size: 20px;
+  font-size: 17px;
 }
 .mobile__list li {
   position: relative;
@@ -779,7 +848,7 @@ body {
 .mobile__list li img {
   position: absolute;
   left: 6px;
-  width: 21px;
+  width: 20px;
   height: 21px;
   top: 24%;
 }
@@ -892,9 +961,51 @@ body {
 }
 .mobile__logo-text {
   font-family: "Drina";
-  font-family: "Drina";
   font-size: 22px;
   color: #000;
   line-height: 22px;
   font-weight: 600;
+}
+
+.mobile__container-telephone {
+  padding: 10px 10px;
+}
+.mobile__container-telephone:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.d-block {
+  display: block;
+  padding: 0px 8px;
+}
+
+.mobile__search {
+  width: 40%;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+  margin-right: 20px;
+  padding: 0px 15px;
+}
+.mobile__search form {
+  display: block;
+}
+.mobile__search input {
+  width: 100%;
+  padding: 10px 0px;
+  border-radius: 50px;
+  padding-left: 17px;
+}
+
+.mobile__search-icon {
+  position: absolute;
+  left: 85%;
+  top: 20%;
+  background: none;
+}
+@media (max-width: 420px) {
+  .mobile__search-icon {
+    left: 80%;
+  }
 }
