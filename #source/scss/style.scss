@@ -396,7 +396,8 @@ body{
 			visibility: hidden;
 			position: absolute;
 			z-index: 1000000;
-			padding: 0px 20px;
+			left: -22px;
+    padding: 0px 22px;
 			top: 30px;
 			transition: all 0.4s ease;	
 			align-items: start;
@@ -815,3 +816,124 @@ position: relative;
 				left: 80%;
 		}
 }
+/*mobile-end-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*category-start-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.category {
+
+	padding: 60px 0px;
+	.h1{
+		font-family: Montserrat;
+font-size: 36px;
+font-style: normal;
+font-weight: 300;
+line-height: 44px;
+letter-spacing: 0em;
+text-align: center;
+text-transform: uppercase;
+	}
+	&__body { 
+
+		flex-direction: column;
+		display: flex;
+		align-items: center;
+		justify-content: center;}
+	&__title {color: #451106;}
+	&__button { 
+		margin-bottom: 20px;
+		.svg-hover{
+		transition: all 0.4s ease;	
+		svg{
+			transition: all 0.4s ease;	
+			fill:white;
+		}
+		&:hover{
+			svg{
+				fill:#451106;
+				transition: all 0.4s ease;
+			}
+			transition: all 0.4s ease;
+		}
+	}
+	transition: all 0.4s ease;
+		color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+background: rgba(69, 17, 6, 1);
+border-radius: 26px;
+
+&:hover{
+	transition: all 0.4s ease;
+	background: white;
+	color: #451106;
+	box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%)
+}
+span{
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+}
+
+	}
+	&__elements-container{
+			display: flex;
+			flex-direction: column;
+width: 100%;
+background: #E4CAC8;
+	}
+	&__elements-body { 
+		padding: 20px 0px;
+flex-wrap: wrap;
+		display: flex;
+		align-items: center; 
+		justify-content: center;
+
+	
+	}
+	&__element { 
+
+		flex:1 0 17%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	margin-bottom: 10px;
+	
+	}
+	&__element-body{
+			transition: all 0.4s ;
+		&:hover{
+			transition: all 0.4s ;
+	box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%)
+		}
+		width: 80%;
+		padding: 10px;
+			background: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+	}
+	&__element-image { 
+position: relative;
+padding: 11%;
+img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+}
+	}
+	&__element-text {
+width: 50%;
+		font-weight: 600;
+		color: #000;
+		text-transform: uppercase;
+		margin-left: 20px;
+	}
+}
+
+/*category-end-----------------------------------------------------------------------------------------------------------------------------------------------------*/
