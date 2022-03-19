@@ -39,9 +39,9 @@ body{
 	margin-right: 30px;
 	margin-left: 30px;
 	height: 100%;
-		@media (max-width: 346px) {
-			margin-right: 10px;
-	margin-left: 10px;
+	@media (max-width: 346px) {
+		margin-right: 10px;
+		margin-left: 10px;
 	}
 
 }
@@ -223,19 +223,31 @@ body{
 /*-header-end--------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*nav-start----------------------------------------------------------------------------------------------------------------------------------------------------*/
 .sticky {
-
+ 	
 	top: 0;
+	
+	position: fixed;
 	width: 100%;
 	z-index: 100000;
+	animation: sticky 1s;
 	@media (max-width: 1100px) {
 
 	}
-}
+	@keyframes sticky{
 
+0%{
+transform: translate(0px, -50px);
+}
+100%{
+transform: translate(0px, 0px);
+}
+}
+}
 
 .nav {
 	width: 100%;
-	position: 	sticky;
+	position: fixed;
+
 	border: 1px solid #E9E9E9;
 	background: rgba(253, 249, 249, 0.9);
 	padding: 8px 0px;
@@ -269,8 +281,8 @@ body{
 			font-size: 22px;
 			color: #000;
 			line-height: 22px;
-				@media (max-width: 346px) {
-						font-size: 18px;
+			@media (max-width: 346px) {
+				font-size: 18px;
 			}
 			&:hover{
 
@@ -397,7 +409,7 @@ body{
 			position: absolute;
 			z-index: 1000000;
 			left: -22px;
-    padding: 0px 22px;
+			padding: 0px 22px;
 			top: 30px;
 			transition: all 0.4s ease;	
 			align-items: start;
@@ -791,7 +803,7 @@ body{
 .mobile__search{
 	width: 40%;
 	
-position: relative;
+	position: relative;
 
 	flex:1 0 30%;
 	margin-right: 20px;
@@ -809,28 +821,28 @@ position: relative;
 }
 .mobile__search-icon{
 	position: absolute;
-		left: 85%;	
-		top: 20%;
-		background: none;
-			@media (max-width: 420px) {
-				left: 80%;
-		}
+	left: 85%;	
+	top: 20%;
+	background: none;
+	@media (max-width: 420px) {
+		left: 80%;
+	}
 }
 /*mobile-end-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*category-start-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .category {
-
+display: none;
 	padding: 60px 0px;
 	.h1{
 		font-family: Montserrat;
-font-size: 36px;
-font-style: normal;
-font-weight: 300;
-line-height: 44px;
-letter-spacing: 0em;
-text-align: center;
-text-transform: uppercase;
+		font-size: 36px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 44px;
+		letter-spacing: 0em;
+		text-align: center;
+		text-transform: uppercase;
 	}
 	&__body { 
 
@@ -838,102 +850,208 @@ text-transform: uppercase;
 		display: flex;
 		align-items: center;
 		justify-content: center;}
-	&__title {color: #451106;}
-	&__button { 
-		margin-bottom: 20px;
-		.svg-hover{
-		transition: all 0.4s ease;	
-		svg{
-			transition: all 0.4s ease;	
-			fill:white;
-		}
-		&:hover{
-			svg{
-				fill:#451106;
-				transition: all 0.4s ease;
+		&__title {color: #451106;}
+		&__button { 
+			margin-bottom: 20px;
+			.svg-hover{
+				transition: all 0.4s ease;	
+				svg{
+					transition: all 0.4s ease;	
+					fill:white;
+				}
+				&:hover{
+					svg{
+						fill:#451106;
+						transition: all 0.4s ease;
+					}
+					transition: all 0.4s ease;
+				}
 			}
 			transition: all 0.4s ease;
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: rgba(69, 17, 6, 1);
+			border-radius: 26px;
+
+			&:hover{
+				transition: all 0.4s ease;
+				background: white;
+				color: #451106;
+				box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%)
+			}
+			span{
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 5px;
+			}
+
 		}
-	}
-	transition: all 0.4s ease;
-		color: white;
-display: flex;
-align-items: center;
-justify-content: center;
-background: rgba(69, 17, 6, 1);
-border-radius: 26px;
-
-&:hover{
-	transition: all 0.4s ease;
-	background: white;
-	color: #451106;
-	box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%)
-}
-span{
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 5px;
-}
-
-	}
-	&__elements-container{
+		&__elements-container{
 			display: flex;
 			flex-direction: column;
-width: 100%;
-background: #E4CAC8;
-	}
-	&__elements-body { 
-		padding: 20px 0px;
-flex-wrap: wrap;
-		display: flex;
-		align-items: center; 
-		justify-content: center;
-
-	
-	}
-	&__element { 
-
-		flex:1 0 17%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	margin-bottom: 10px;
-	
-	}
-	&__element-body{
-			transition: all 0.4s ;
-		&:hover{
-			transition: all 0.4s ;
-	box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%)
+			width: 100%;
+			background: #E4CAC8;
 		}
-		width: 80%;
-		padding: 10px;
+		&__elements-body { 
+			padding: 20px 0px;
+			flex-wrap: wrap;
+			display: flex;
+			align-items: center; 
+			justify-content: center;
+
+
+		}
+		&__element { 
+
+			flex:1 0 17%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 10px;
+
+		}
+		&__element-body{
+			transition: all 0.4s ;
+			&:hover{
+				transition: all 0.4s ;
+				box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%)
+			}
+			width: 80%;
+			padding: 10px;
 			background: white;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+		}
+		&__element-image { 
+			position: relative;
+			padding: 11%;
+			img{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				object-fit:cover;
+			}
+		}
+		&__element-text {
+			width: 50%;
+			font-weight: 600;
+			color: #000;
+			text-transform: uppercase;
+			margin-left: 20px;
+		}
 	}
-	&__element-image { 
-position: relative;
-padding: 11%;
-img{
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	object-fit:cover;
-}
-	}
-	&__element-text {
-width: 50%;
-		font-weight: 600;
-		color: #000;
-		text-transform: uppercase;
-		margin-left: 20px;
-	}
-}
 
 /*category-end-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*holidays-start-------------------------------------------------------------------------------------------------------------------------------------------*/
+.holidays {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+
+height: 80%;
+padding:80px 0px;
+		background: url('../img/background/flowers-draw-color.jpg') center / cover no-repeat;
+	&__container {
+		margin: 0 auto;
+		max-width: 1890px}
+
+	&__body {
+		li{
+			line-height: 88px;
+		}
+		font-size: 72px;
+			@media (max-width: 1800px) {
+					font-size: 62px;
+li{
+	line-height: 88px;
+}
+		}
+			@media (max-width: 1200px) {
+
+					font-size: 52px;
+					li{
+						line-height: 64px;
+					}
+		}
+			@media (max-width: 870px) {
+
+					font-size: 5.7vw;
+					li{
+						line-height: 64px;
+					}
+
+		}
+		@media (max-width: 550px) {
+font-size: 6.5vw;
+					li{
+						
+					}
+
+		}
+	
+	
+	display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;}
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__title-text { 
+		padding: 10px 20px;
+		background: #FFFFFF;
+border-radius: 52px;
+	color: #6B5C58;
+	font-family: Montserrat;
+font-weight: 400;
+text-transform: uppercase;	
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__list {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+		font-family: Montserrat;
+
+li{
+
+	transition: all 0.2s;
+	&:hover{
+		transition: all 0.6s;
+		transform: translate(-50px, 0px);
+	}
+	color: #484241;
+}
+text-transform: uppercase;
+font-weight: 800;
+
+
+
+
+	}
+	&__list-item {display: flex;
+		align-items: center;}
+	&__svg {
+
+display: flex;
+align-items: center;
+justify-content: center;
+svg{
+margin-left: 13px;
+	}
+}
+}
+/*holidays-end-------------------------------------------------------------------------------------------------------------------------------------------*/
