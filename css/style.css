@@ -1491,6 +1491,7 @@ body {
   text-transform: uppercase;
 }
 .best-seller__body-cart {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1509,7 +1510,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 90px;
+  padding: 0px 0px;
 }
 .best-seller__image {
   width: 100%;
