@@ -1111,7 +1111,7 @@ text-align: center;
 text-transform: uppercase;
 }
 	&__body-cart {
-			
+		overflow: hidden;
 
 		display: flex;
 		justify-content: space-between;
@@ -1121,7 +1121,7 @@ text-transform: uppercase;
 	 display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 0px 90px;
+		padding: 0px 0px;
 
 		
 	}
