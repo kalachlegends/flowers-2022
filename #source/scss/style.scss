@@ -125,7 +125,7 @@ body{
 			align-items: center;
 		}
 		@media (max-width: 1100px) {
-			margin-bottom: 10px;
+			margin-bottom: 17px;
 
 		}
 	}
@@ -222,31 +222,12 @@ body{
 }
 /*-header-end--------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*nav-start----------------------------------------------------------------------------------------------------------------------------------------------------*/
-.sticky {
- 	
-	top: 0;
-	
-	position: fixed;
-	width: 100%;
-	z-index: 100000;
-	animation: sticky 1s;
-	@media (max-width: 1100px) {
 
-	}
-	@keyframes sticky{
-
-0%{
-transform: translate(0px, -50px);
-}
-100%{
-transform: translate(0px, 0px);
-}
-}
-}
 
 .nav {
 	width: 100%;
-	position: fixed;
+	position: relative;
+	z-index: 2;
 
 	border: 1px solid #E9E9E9;
 	background: rgba(253, 249, 249, 0.9);
@@ -284,20 +265,13 @@ transform: translate(0px, 0px);
 			@media (max-width: 346px) {
 				font-size: 18px;
 			}
-			&:hover{
-
-
-			}
 		}
-
-
 	}
 	&__svg-hover-icon{
 		svg{
 			transition: 0.3s;	
 
 			&:hover{
-
 				fill: #A57B78;
 				transition: 0.5s;	
 			}
@@ -324,18 +298,13 @@ transform: translate(0px, 0px);
 	}
 	&__main-container {
 		flex-grow: 	1;
-
-
 	}
 	&__list {
-
 		display: flex;
 		flex-direction: row;
 		@media (max-width: 800px) {
 			display: none;
 		}
-
-		
 	}
 	&__shop-block { 
 		.nav__burger{
@@ -365,17 +334,15 @@ transform: translate(0px, 0px);
 				transform: rotate(180deg);
 				transition: all 0.4s ease;
 			}
-
 			transition: all 0.4s ease;
 			stroke: #A57B78; 
-
-
 		}
 
 	}
 
 
 	.list-item { 
+		font-size: 15px;
 		position: relative;
 		margin-left: 29px;
 		&:hover{
@@ -563,11 +530,16 @@ transform: translate(0px, 0px);
 			font-size: 8vw;
 			line-height: 69px;
 		}
+		@media (max-width: 500px) {
+			font-size: 10vw;
+			line-height: 80px;
+		}
 	}
 	&__button {
 		
 		display: flex;	
 		span{
+
 			padding: 10px 40px;
 			background: rgba(253, 249, 249, 0.8);
 			backdrop-filter: saturate(130%) blur(30px);
@@ -586,6 +558,9 @@ transform: translate(0px, 0px);
 				padding: 10px 30px;
 				font-size: 3.7vw;
 
+			}
+			@media (max-width: 500px) {
+				font-size: 4.2vw;
 			}
 			&:hover{
 				transition: 0.3s;
@@ -658,17 +633,17 @@ transform: translate(0px, 0px);
 			position: relative;
 			img{
 				position: absolute;
-				left: 6px;
-				width: 20px;
-				height: 21px;
-				top: 24%;
+			left: 9px;
+    width: 20px;
+    height: 21px;
+    top: 28%;
 			}
 			a {
 				transition: all 0.2s ease;	
 				color: #000;
 				display: block;
 				&:first-child{
-					padding: 10px 33px;
+				    padding: 14px 42px;
 
 				}
 				&:hover{
@@ -700,15 +675,7 @@ transform: translate(0px, 0px);
 	&__body {
 
 
-		.mobile__link{
-
-
-		}
-		.sub-svg {
-		}
-		.text {
-			&_mob {}
-		}
+	
 		.active-mobile-sub-menu{
 
 			svg{
@@ -726,7 +693,7 @@ transform: translate(0px, 0px);
 
 			svg{
 				position: absolute;
-				top: 10px;
+				top: 14px;
 				left: 92%;
 				transition: all 0.4s ease;
 				@media (max-width: 768px) {
@@ -761,7 +728,7 @@ transform: translate(0px, 0px);
 		align-items: center;
 		justify-content: space-between;
 	}
-	&__close { margin-left: 10px; 
+	&__close { margin-left: 24px; 
 		img{
 
 		}
@@ -791,9 +758,9 @@ transform: translate(0px, 0px);
 }
 .mobile__container-telephone{
 
-	padding: 10px 10px;
+	padding: 16px 12px;
 	&:nth-child(2){
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 }
 .d-block{
@@ -828,11 +795,35 @@ transform: translate(0px, 0px);
 		left: 80%;
 	}
 }
+.sticky {
+
+	top: 0;
+	
+	position: fixed;
+	width: 100%;
+	z-index: 100000;
+	animation: sticky 1s;
+		@media (max-width: 800px) {
+				animation: none;
+	}
+	@media (max-width: 1100px) {
+
+	}
+	@keyframes sticky{
+
+		0%{
+			transform: translate(0px, -50px);
+		}
+		100%{
+			transform: translate(0px, 0px);
+		}
+	}
+}
 /*mobile-end-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*category-start-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .category {
-display: none;
+	display: none;
 	padding: 60px 0px;
 	.h1{
 		font-family: Montserrat;
@@ -948,110 +939,217 @@ display: none;
 		}
 	}
 
-/*category-end-----------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*holidays-start-------------------------------------------------------------------------------------------------------------------------------------------*/
-.holidays {
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
+	/*category-end-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+	/*holidays-start-------------------------------------------------------------------------------------------------------------------------------------------*/
+	.holidays {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
 
-height: 80%;
-padding:80px 0px;
+		padding:80px 0px;
+		@media (max-width: 1050px) {
+			background: url('../img/background/flowers-610.jpg') center / cover no-repeat;
+		}
+		@media (max-width: 760px) {
+			min-height: 68%;
+
+		}
 		background: url('../img/background/flowers-draw-color.jpg') center / cover no-repeat;
-	&__container {
-		margin: 0 auto;
-		max-width: 1890px}
+		&__container {
+			margin: 0 auto;
+			max-width: 1890px}
 
-	&__body {
-		li{
-			line-height: 88px;
-		}
-		font-size: 72px;
-			@media (max-width: 1800px) {
+			&__body {
+				li{
+					line-height: 88px;
+				}
+				font-size: 72px;
+				@media (max-width: 1800px) {
 					font-size: 62px;
-li{
-	line-height: 88px;
-}
-		}
-			@media (max-width: 1200px) {
+					li{
+						line-height: 88px;
+					}
+				}
+				@media (max-width: 1200px) {
 
 					font-size: 52px;
 					li{
 						line-height: 64px;
 					}
-		}
-			@media (max-width: 870px) {
+				}
+				@media (max-width: 870px) {
 
 					font-size: 5.7vw;
 					li{
 						line-height: 64px;
 					}
 
-		}
-		@media (max-width: 550px) {
-font-size: 6.5vw;
+				}
+				@media (max-width: 550px) {
+					font-size: 6.5vw;
 					li{
-						
+						line-height: 50px;
 					}
 
-		}
-	
-	
-	display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;}
-	&__title {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	&__title-text { 
-		padding: 10px 20px;
-		background: #FFFFFF;
-border-radius: 52px;
-	color: #6B5C58;
-	font-family: Montserrat;
-font-weight: 400;
-text-transform: uppercase;	
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	&__list {
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-		font-family: Montserrat;
+				}
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;}
+				&__title {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				&__title-text { 
+					text-align: center;
+					padding: 10px 20px;
+					background: #FFFFFF;
+					border-radius: 52px;
+					color: #484241;
+					font-family: Montserrat;
+					font-weight: 400;
+					text-transform: uppercase;	
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					transition: 0.3s;
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+						&:hover{
+				transition: 0.3s;
+				box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.15);
+			}
+					svg{
+						width: 50px;
+						fill: black;
+						margin-left: 30px;
+						stroke-width: 2;
+						stroke: black;
+					}
+					margin-bottom: 35px;
+						@media (max-width: 720px) {
+								margin-bottom: 15px;
+					}
+				}
+				&__list {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+					font-family: Montserrat;
+					.svg-hover{
+						transition: all 0.4s ease;	
+						svg{
+							transition: all 0.4s ease;	
+							fill: #484241;
+						}
+						&:hover{
+							svg{
+								fill:#89807E;
+								transition: all 0.4s ease;
+							}
+							transition: all 0.4s ease;
+						}
+					}
+					li{
 
-li{
 
-	transition: all 0.2s;
-	&:hover{
-		transition: all 0.6s;
-		transform: translate(-50px, 0px);
-	}
-	color: #484241;
-}
-text-transform: uppercase;
-font-weight: 800;
-
-
+						transition: all 0.2s;
+						&:hover{
+							color: 	#89807E;
+							transition: all 0.6s;
+							transform: translate(-50px, 0px);
+						}
+						color: #484241;
+					}
+					text-transform: uppercase;
+					font-weight: 800;
 
 
-	}
-	&__list-item {display: flex;
-		align-items: center;}
-	&__svg {
 
-display: flex;
-align-items: center;
-justify-content: center;
-svg{
-margin-left: 13px;
-	}
-}
-}
+
+				}
+				&__list-item {display: flex;
+					align-items: center;}
+					&__svg {
+
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						svg{
+							width: 32px;
+							margin-left: 13px;
+
+							@media (max-width: 800px) {
+								width: 24px;
+							}
+							@media (max-width: 500px) {
+								width: 20px;
+							}		
+						}
+					}
+				}
 /*holidays-end-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*best-seller-start-------------------------------------------------------------------------------------------------------------------------------------------*/
+.best-seller {
+		
+	padding: 40px 0px;
+	background: url('../img/background/flowers-back-cart.jpg') center /cover no-repeat;
+	&__body {display: flex;
+		align-items: center; 
+		justify-content: center;
+		flex-direction: column;
+	}
+	&__title {font-family: Montserrat;
+font-size: 72px;
+font-style: normal;
+font-weight: 400;
+line-height: 88px;
+letter-spacing: 0.07em;
+text-align: center;
+text-transform: uppercase;
+}
+	&__body-cart {
+			
+
+		display: flex;
+		justify-content: space-between;
+	}
+	&__cart {
+
+	 display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0px 90px;
+
+		
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		position: relative;
+padding: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	img{
+    position: absolute;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+	}
+	}
+	&__title-cart {}
+	&__money-text {}
+	&__order {}
+	&__buy-text {}
+}
+.wrapper {
+}
+.container {
+}
+
+/*best-seller-end-------------------------------------------------------------------------------------------------------------------------------------------*/

@@ -230,7 +230,7 @@ body {
 }
 @media (max-width: 1100px) {
   .header__telephone {
-    margin-bottom: 10px;
+    margin-bottom: 17px;
   }
 }
 .header__number {
@@ -348,38 +348,10 @@ body {
 
 /*-header-end--------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*nav-start----------------------------------------------------------------------------------------------------------------------------------------------------*/
-.sticky {
-  top: 0;
-  position: fixed;
-  width: 100%;
-  z-index: 100000;
-  -webkit-animation: sticky 1s;
-          animation: sticky 1s;
-}
-@-webkit-keyframes sticky {
-  0% {
-    -webkit-transform: translate(0px, -50px);
-            transform: translate(0px, -50px);
-  }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-}
-@keyframes sticky {
-  0% {
-    -webkit-transform: translate(0px, -50px);
-            transform: translate(0px, -50px);
-  }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-}
-
 .nav {
   width: 100%;
-  position: fixed;
+  position: relative;
+  z-index: 2;
   border: 1px solid #E9E9E9;
   background: rgba(253, 249, 249, 0.9);
   padding: 8px 0px;
@@ -544,6 +516,7 @@ body {
   transition: all 0.4s ease;
 }
 .nav .list-item {
+  font-size: 15px;
   position: relative;
   margin-left: 29px;
 }
@@ -762,6 +735,12 @@ body {
     line-height: 69px;
   }
 }
+@media (max-width: 500px) {
+  .slider__text {
+    font-size: 10vw;
+    line-height: 80px;
+  }
+}
 .slider__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -791,6 +770,11 @@ body {
   .slider__button span {
     padding: 10px 30px;
     font-size: 3.7vw;
+  }
+}
+@media (max-width: 500px) {
+  .slider__button span {
+    font-size: 4.2vw;
   }
 }
 .slider__button span:hover {
@@ -872,10 +856,10 @@ body {
 }
 .mobile__list li img {
   position: absolute;
-  left: 6px;
+  left: 9px;
   width: 20px;
   height: 21px;
-  top: 24%;
+  top: 28%;
 }
 .mobile__list li a {
   -webkit-transition: all 0.2s ease;
@@ -885,7 +869,7 @@ body {
   display: block;
 }
 .mobile__list li a:first-child {
-  padding: 10px 33px;
+  padding: 14px 42px;
 }
 .mobile__list li a:hover {
   background-color: rgba(7, 30, 31, 0.01);
@@ -923,7 +907,7 @@ body {
 }
 .mobile__body .sub-svg svg {
   position: absolute;
-  top: 10px;
+  top: 14px;
   left: 92%;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -964,7 +948,7 @@ body {
           justify-content: space-between;
 }
 .mobile__close {
-  margin-left: 10px;
+  margin-left: 24px;
 }
 .mobile__logo-container {
   display: -webkit-box;
@@ -993,10 +977,10 @@ body {
 }
 
 .mobile__container-telephone {
-  padding: 10px 10px;
+  padding: 16px 12px;
 }
 .mobile__container-telephone:nth-child(2) {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .d-block {
@@ -1032,6 +1016,41 @@ body {
 @media (max-width: 420px) {
   .mobile__search-icon {
     left: 80%;
+  }
+}
+
+.sticky {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100000;
+  -webkit-animation: sticky 1s;
+          animation: sticky 1s;
+}
+@media (max-width: 800px) {
+  .sticky {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+@-webkit-keyframes sticky {
+  0% {
+    -webkit-transform: translate(0px, -50px);
+            transform: translate(0px, -50px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+@keyframes sticky {
+  0% {
+    -webkit-transform: translate(0px, -50px);
+            transform: translate(0px, -50px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
 }
 
@@ -1228,9 +1247,18 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 80%;
   padding: 80px 0px;
   background: url("../img/background/flowers-draw-color.jpg") center/cover no-repeat;
+}
+@media (max-width: 1050px) {
+  .holidays {
+    background: url("../img/background/flowers-610.jpg") center/cover no-repeat;
+  }
+}
+@media (max-width: 760px) {
+  .holidays {
+    min-height: 68%;
+  }
 }
 .holidays__container {
   margin: 0 auto;
@@ -1283,6 +1311,9 @@ body {
   .holidays__body {
     font-size: 6.5vw;
   }
+  .holidays__body li {
+    line-height: 50px;
+  }
 }
 .holidays__title {
   display: -webkit-box;
@@ -1296,10 +1327,11 @@ body {
           justify-content: center;
 }
 .holidays__title-text {
+  text-align: center;
   padding: 10px 20px;
   background: #FFFFFF;
   border-radius: 52px;
-  color: #6B5C58;
+  color: #484241;
   font-family: Montserrat;
   font-weight: 400;
   text-transform: uppercase;
@@ -1312,6 +1344,31 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 35px;
+}
+.holidays__title-text:hover {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.15);
+}
+.holidays__title-text svg {
+  width: 50px;
+  fill: black;
+  margin-left: 30px;
+  stroke-width: 2;
+  stroke: black;
+}
+@media (max-width: 720px) {
+  .holidays__title-text {
+    margin-bottom: 15px;
+  }
 }
 .holidays__list {
   display: -webkit-box;
@@ -1331,6 +1388,28 @@ body {
   text-transform: uppercase;
   font-weight: 800;
 }
+.holidays__list .svg-hover {
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.holidays__list .svg-hover svg {
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  fill: #484241;
+}
+.holidays__list .svg-hover:hover {
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.holidays__list .svg-hover:hover svg {
+  fill: #89807E;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
 .holidays__list li {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -1338,6 +1417,7 @@ body {
   color: #484241;
 }
 .holidays__list li:hover {
+  color: #89807E;
   -webkit-transition: all 0.6s;
   -o-transition: all 0.6s;
   transition: all 0.6s;
@@ -1365,7 +1445,94 @@ body {
           justify-content: center;
 }
 .holidays__svg svg {
+  width: 32px;
   margin-left: 13px;
+}
+@media (max-width: 800px) {
+  .holidays__svg svg {
+    width: 24px;
+  }
+}
+@media (max-width: 500px) {
+  .holidays__svg svg {
+    width: 20px;
+  }
 }
 
 /*holidays-end-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*best-seller-start-------------------------------------------------------------------------------------------------------------------------------------------*/
+.best-seller {
+  padding: 40px 0px;
+  background: url("../img/background/flowers-back-cart.jpg") center/cover no-repeat;
+}
+.best-seller__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.best-seller__title {
+  font-family: Montserrat;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 88px;
+  letter-spacing: 0.07em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.best-seller__body-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.best-seller__cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 90px;
+}
+.best-seller__image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.best-seller__image img {
+  position: absolute;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*best-seller-end-------------------------------------------------------------------------------------------------------------------------------------------*/
