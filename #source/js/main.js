@@ -5,3 +5,4 @@
 //@prepros-append swiper.js
 //@prepros-append script-parallax.js
 //@prepros-append spoller-mobile.js
+//@prepros-append jquery.sticky.js
