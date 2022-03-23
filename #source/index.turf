@@ -7,7 +7,7 @@
 	<!-- Заголовок страницы в браузере -->
 	<title>Привет SASS(SCSS)!</title>
 	<!-- Подключаем CSS -->
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link
 	rel="stylesheet"
 	href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
@@ -15,11 +15,11 @@
 	<link rel="stylesheet" href="css/style.css" />
 
 	<!-- Кодировка страницы -->
-    <meta name='viewport' content='width=device-width,initial-scale=1'/>
-    <meta content='true' name='HandheldFriendly'/>
-    <meta content='width' name='MobileOptimized'/>
-    <meta content='yes' name='apple-mobile-web-app-capable'/>
-    
+	<meta name='viewport' content='width=device-width,initial-scale=1'/>
+	<meta content='true' name='HandheldFriendly'/>
+	<meta content='width' name='MobileOptimized'/>
+	<meta content='yes' name='apple-mobile-web-app-capable'/>
+
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 </head>
 <!-- Отображаемое тело страницы -->
@@ -28,14 +28,17 @@
 	<!--@import "header.html-->
 	<!--@import "nav.html-->
 	<!--@import "mobile-header.html-->
-		<!--@import "slider.html-->
-		
+	<!--@import "slider.html-->
 
-				<!--@import "best-seller.html-->
-					<!--@import "holidays.html-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+	<!--@import "best-seller.html-->
+	<!--@import "holidays.html-->
+	<!--@import "category-flowers.html-->
+	<!--@import "footer.html-->
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="js/main.js"> </script>
 
 </body>
