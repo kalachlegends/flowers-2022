@@ -68,7 +68,11 @@ body{
 	margin-right: 30px;
 	margin-left: 30px;
 	height: 100%;
-	@media (max-width: 346px) {
+	@media (max-width: 720px) {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+	@media (max-width: 420px) {
 		margin-right: 10px;
 		margin-left: 10px;
 	}
@@ -1280,9 +1284,7 @@ width: 100%;
 			
 
 		}
-		.wrapper {
-
-		}
+		
 	}
 	
 }
@@ -1847,11 +1849,7 @@ height: 70%;
 					}
 
 				}
-				.wrapper {
-				}
-				.container {
-				}
-
+				
 /*best-seller-end-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*category-flowers-start-------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -1912,8 +1910,7 @@ line-height: 29px;
 @include adaptiv-font(20, 14)
 	}
 }
-.ibg {
-}
+
 /*footer-start-------------------------------------------------------------------------------------------------------------------------------------------*/
 .footer {
 	a{
@@ -1926,6 +1923,9 @@ line-height: 29px;
 	}
 	}
 	padding: 20px 0px;
+		@media (max-width: 420px) {
+					padding: 10px 0px;
+		}
 	&__row {display: flex; justify-content: space-between;
 		flex-wrap: wrap;
 			@media (max-width: 720px) {
@@ -1938,6 +1938,10 @@ line-height: 29px;
 
 		display: flex;
 		flex-direction: column;
+			@media (max-width: 720px) {
+				margin-bottom: 10px;
+		}
+
 	}
 	&__logo {
 
@@ -1945,16 +1949,58 @@ line-height: 29px;
 		align-items: center;
 		width: 50%;
 		padding: 0% 0% 50% 0px;
+			@media (max-width: 720px) {
+					width: 10%;
+		padding: 0% 0% 10% 0px;
+		}
 	}
 	&__text-logo {
 		font-family: "Drina";
- @include adaptiv-font(24, 14);
+font-size: 24px;
     color: #000;
     line-height: 22px;
     text-align: center;
-    
+    	@media (max-width: 720px) {
+				margin-left: 10px;
+		}
 	}
-	&__title {font-family: Montserrat;
+		.active-sub-menu{
+  color: #484241;
+  transition: all 0.4s ease;
+			svg{
+				transform: rotate(180deg);
+				transition: all 0.4s ease;
+				stroke: #A57B78; 
+			}
+		}
+
+		.sub-svg{
+
+			position: relative;
+			transition: all 0.8s ease;	
+			stroke: black;
+
+			svg{
+				display: none;
+				@media (max-width: 720px) {
+	display: block;;
+	}
+				position: absolute;
+				top: 14px;
+				left: 92%;
+				transition: all 0.4s ease;
+				@media (max-width: 768px) {
+					left: 92%;
+				}
+				@media (max-width: 500px) {
+					left: 88%;
+				}
+			}
+			
+
+		}
+	&__title {
+font-family: Montserrat;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
@@ -1962,7 +2008,13 @@ line-height: 22px;
 letter-spacing: 0px;
 text-align: left;
 margin-bottom: 20px;
+pointer-events: none;
+	@media (max-width: 720px) {
+	pointer-events: auto;
+	cursor: pointer;
+	}
 }
+
 	&__list {	@media (max-width: 720px) {
 		display: none;
 	}
@@ -1977,6 +2029,9 @@ margin-bottom: 20px;
 	}
 	&__social { display: flex;
 		align-items: center;
+			@media (max-width: 720px) {
+				justify-content: space-between;
+		}
 		svg{
 				transition: all 0.4s ease;
 			fill:#484241;
@@ -1988,12 +2043,15 @@ margin-bottom: 20px;
 		}
 	}
 }
-/* .border-solid-bottom{
-	border-bottom: 1px solid #979797;
-} */
+
 .aic{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+		@media (max-width: 720px) {
+			flex-direction: row;
+			align-items: left;
+			justify-content: start;
+	}
 }
 /*footer-end-------------------------------------------------------------------------------------------------------------------------------------------*/
