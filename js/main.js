@@ -13,9 +13,9 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
  $('.item-triger').click(function(){ //при клике на бургер что дожно происхоидть
- 	 if ($('.footer__title').hasClass('one')) {
+ 	 if ($('.footer__title').hasClass('active-sub-menu')) {
  	 	$('.item-triger').not($(this)).removeClass('active-sub-menu')
- 	 	$('.footer__list').not($(this).next()).slideUp()
+ 	 	$('.footer__list').not($(this).next()).slideUp(500)
  	 }
  	$(this).toggleClass('active-sub-menu').next('.footer__list').slideToggle(500);//когда человек будет нажажимать элемент с классом mobile__item-triger будет появляться элемент с классом mobile__sub-menu
  
@@ -439,6 +439,7 @@ $(document).ready(function() {
  $(document).ready(function(){
     $("#sticker").sticky({topSpacing:0});
   });
+
  AOS.init({
         offset: 130, // offset (in px) from the original trigger point
         delay: 50, // values from 0 to 3000, with step 50ms
@@ -457,8 +458,8 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
- $('.bag-toogle,.close-bag,.close-menu,.toogle-bag').click(function(event){ //при клике на бургер что дожно происхоидть
- 	$('.bag,.close-bag,.close-menu,.toogle-bag').toggleClass('active');//когда человек будет нажажимать на бургер будет добавляться класс active
+ $('.bag-toogle,.close-bag,.close-menu,.toogle-bag,.toogle-bag1').click(function(event){ //при клике на бургер что дожно происхоидть
+ 	$('.bag,.close-bag,.close-menu,.toogle-bag,.toogle-bag1').toggleClass('active');//когда человек будет нажажимать на бургер будет добавляться класс active
  	$('body').toggleClass('lock');
  });
 });
@@ -518,6 +519,25 @@ var swiper = new Swiper('.mySwiper', {
           },
         },
       });
+      var swiper = new Swiper(".mySwiper1", {
+       
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+       
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+
 // Sticky Plugin v1.0.4 for jQuery
 // =============
 // Author: Anthony Garand
@@ -822,7 +842,7 @@ const lockPadding = document.querySelectorAll(".lock-padding");
 
 let unlock = true;
 
-const timeout = 800;
+const timeout = 80;
 
 if (popupLinks.length > 0) {
 	for (let index = 0; index < popupLinks.length; index++) {
@@ -882,7 +902,7 @@ function bodyLock() {
 		}
 	}
 	body.style.paddingRight = lockPaddingValue;
-	body.classList.add('lock');
+	body.classList.add('lockpop');
 
 	unlock = false;
 	setTimeout(function () {
@@ -899,7 +919,7 @@ function bodyUnLock() {
 			}
 		}
 		body.style.paddingRight = '0px';
-		body.classList.remove('lock');
+		body.classList.remove('lockpop');
 	}, timeout);
 
 	unlock = false;

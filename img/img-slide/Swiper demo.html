@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://swiperjs.com/demos/310-thumbs-gallery-loop/core -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="./Swiper demo_files/swiper-bundle.min.css">
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    body {
+      background: #000;
+      color: #000;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mySwiper2 {
+      height: 80%;
+      width: 100%;
+    }
+
+    .mySwiper {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+
+    .mySwiper .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .mySwiper .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+    .row{
+      display: flex;
+      flex-direction: row;
+      flex: 1 1 100%;
+    }
+    .body{
+     
+      flex: 1 1 80%;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="row">
+    <div class="body">
+      <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 swiper-initialized swiper-horizontal swiper-pointer-events">
+        <div class="swiper-wrapper" id="swiper-wrapper-51a5d571f68f826b" aria-live="polite" style="transform: translate3d(-671px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="9" style="width: 661px; margin-right: 10px;" role="group" aria-label="10 / 10">
+          <img src="./Swiper demo_files/nature-10.jpg">
+        </div>
+        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 661px; margin-right: 10px;" role="group" aria-label="1 / 10">
+          <img src="./Swiper demo_files/nature-1.jpg">
+        </div>
+        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 661px; margin-right: 10px;" role="group" aria-label="2 / 10">
+          <img src="./Swiper demo_files/nature-2.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="2" style="width: 661px; margin-right: 10px;" role="group" aria-label="3 / 10">
+          <img src="./Swiper demo_files/nature-3.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="3" style="width: 661px; margin-right: 10px;" role="group" aria-label="4 / 10">
+          <img src="./Swiper demo_files/nature-4.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="4" style="width: 661px; margin-right: 10px;" role="group" aria-label="5 / 10">
+          <img src="./Swiper demo_files/nature-5.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="5" style="width: 661px; margin-right: 10px;" role="group" aria-label="6 / 10">
+          <img src="./Swiper demo_files/nature-6.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="6" style="width: 661px; margin-right: 10px;" role="group" aria-label="7 / 10">
+          <img src="./Swiper demo_files/nature-7.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="7" style="width: 661px; margin-right: 10px;" role="group" aria-label="8 / 10">
+          <img src="./Swiper demo_files/nature-8.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="8" style="width: 661px; margin-right: 10px;" role="group" aria-label="9 / 10">
+          <img src="./Swiper demo_files/nature-9.jpg">
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="9" style="width: 661px; margin-right: 10px;" role="group" aria-label="10 / 10">
+          <img src="./Swiper demo_files/nature-10.jpg">
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 661px; margin-right: 10px;" role="group" aria-label="1 / 10">
+          <img src="./Swiper demo_files/nature-1.jpg">
+        </div></div>
+        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-51a5d571f68f826b"></div>
+        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-51a5d571f68f826b"></div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        <div thumbsslider="" class="swiper mySwiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-free-mode swiper-thumbs">
+          <div class="swiper-wrapper" id="swiper-wrapper-18c2d8422f03a675" aria-live="polite" style="transform: translate3d(-671px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="6" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="7 / 10">
+            <img src="./Swiper demo_files/nature-7.jpg">
+          </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="8 / 10">
+            <img src="./Swiper demo_files/nature-8.jpg">
+          </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="9 / 10">
+            <img src="./Swiper demo_files/nature-9.jpg">
+          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="9" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="10 / 10">
+            <img src="./Swiper demo_files/nature-10.jpg">
+          </div>
+          <div class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" data-swiper-slide-index="0" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="1 / 10">
+            <img src="./Swiper demo_files/nature-1.jpg">
+          </div>
+          <div class="swiper-slide swiper-slide-visible swiper-slide-next" data-swiper-slide-index="1" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="2 / 10">
+            <img src="./Swiper demo_files/nature-2.jpg">
+          </div>
+          <div class="swiper-slide swiper-slide-visible" data-swiper-slide-index="2" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="3 / 10">
+            <img src="./Swiper demo_files/nature-3.jpg">
+          </div>
+          <div class="swiper-slide swiper-slide-visible" data-swiper-slide-index="3" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="4 / 10">
+            <img src="./Swiper demo_files/nature-4.jpg">
+          </div>
+          <div class="swiper-slide" data-swiper-slide-index="4" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="5 / 10">
+            <img src="./Swiper demo_files/nature-5.jpg">
+          </div>
+          <div class="swiper-slide" data-swiper-slide-index="5" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="6 / 10">
+            <img src="./Swiper demo_files/nature-6.jpg">
+          </div>
+          <div class="swiper-slide" data-swiper-slide-index="6" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="7 / 10">
+            <img src="./Swiper demo_files/nature-7.jpg">
+          </div>
+          <div class="swiper-slide" data-swiper-slide-index="7" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="8 / 10">
+            <img src="./Swiper demo_files/nature-8.jpg">
+          </div>
+          <div class="swiper-slide" data-swiper-slide-index="8" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="9 / 10">
+            <img src="./Swiper demo_files/nature-9.jpg">
+          </div>
+          <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="9" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="10 / 10">
+            <img src="./Swiper demo_files/nature-10.jpg">
+          </div>
+          <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-thumb-active" data-swiper-slide-index="0" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="1 / 10">
+            <img src="./Swiper demo_files/nature-1.jpg">
+          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="2 / 10">
+            <img src="./Swiper demo_files/nature-2.jpg">
+          </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="3 / 10">
+            <img src="./Swiper demo_files/nature-3.jpg">
+          </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="4 / 10">
+            <img src="./Swiper demo_files/nature-4.jpg">
+          </div></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+         <div class="body">
+      <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 swiper-initialized swiper-horizontal swiper-pointer-events">
+        <div class="swiper-wrapper" id="swiper-wrapper-51a5d571f68f826b" aria-live="polite" style="transform: translate3d(-671px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="9" style="width: 661px; margin-right: 10px;" role="group" aria-label="10 / 10">
+          <img src="./Swiper demo_files/nature-10.jpg">
+        </div>
+        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 661px; margin-right: 10px;" role="group" aria-label="1 / 10">
+          <img src="./Swiper demo_files/nature-1.jpg">
+        </div>
+        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 661px; margin-right: 10px;" role="group" aria-label="2 / 10">
+          <img src="./Swiper demo_files/nature-2.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="2" style="width: 661px; margin-right: 10px;" role="group" aria-label="3 / 10">
+          <img src="./Swiper demo_files/nature-3.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="3" style="width: 661px; margin-right: 10px;" role="group" aria-label="4 / 10">
+          <img src="./Swiper demo_files/nature-4.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="4" style="width: 661px; margin-right: 10px;" role="group" aria-label="5 / 10">
+          <img src="./Swiper demo_files/nature-5.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="5" style="width: 661px; margin-right: 10px;" role="group" aria-label="6 / 10">
+          <img src="./Swiper demo_files/nature-6.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="6" style="width: 661px; margin-right: 10px;" role="group" aria-label="7 / 10">
+          <img src="./Swiper demo_files/nature-7.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="7" style="width: 661px; margin-right: 10px;" role="group" aria-label="8 / 10">
+          <img src="./Swiper demo_files/nature-8.jpg">
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="8" style="width: 661px; margin-right: 10px;" role="group" aria-label="9 / 10">
+          <img src="./Swiper demo_files/nature-9.jpg">
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="9" style="width: 661px; margin-right: 10px;" role="group" aria-label="10 / 10">
+          <img src="./Swiper demo_files/nature-10.jpg">
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 661px; margin-right: 10px;" role="group" aria-label="1 / 10">
+          <img src="./Swiper demo_files/nature-1.jpg">
+        </div></div>
+        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-51a5d571f68f826b"></div>
+        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-51a5d571f68f826b"></div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        <div thumbsslider="" class="swiper mySwiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-free-mode swiper-thumbs">
+          <div class="swiper-wrapper" id="swiper-wrapper-18c2d8422f03a675" aria-live="polite" style="transform: translate3d(-671px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="6" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="7 / 10">
+            <img src="./Swiper demo_files/nature-7.jpg">
+          </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="8 / 10">
+            <img src="./Swiper demo_files/nature-8.jpg">
+          </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="9 / 10">
+            <img src="./Swiper demo_files/nature-9.jpg">
+          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="9" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="10 / 10">
+            <img src="./Swiper demo_files/nature-10.jpg">
+          </div>
+          <div class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" data-swiper-slide-index="0" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="1 / 10">
+            <img src="./Swiper demo_files/nature-1.jpg">
+          </div>
+          <div class="swiper-slide swiper-slide-visible swiper-slide-next" data-swiper-slide-index="1" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="2 / 10">
+            <img src="./Swiper demo_files/nature-2.jpg">
+          </div>
+          <div class="swiper-slide swiper-slide-visible" data-swiper-slide-index="2" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="3 / 10">
+            <img src="./Swiper demo_files/nature-3.jpg">
+          </div>
+          <div class="swiper-slide swiper-slide-visible" data-swiper-slide-index="3" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="4 / 10">
+            <img src="./Swiper demo_files/nature-4.jpg">
+          </div>
+          <div class="swiper-slide" data-swiper-slide-index="4" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="5 / 10">
+            <img src="./Swiper demo_files/nature-5.jpg">
+          </div>
+          <div class="swiper-slide" data-swiper-slide-index="5" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="6 / 10">
+            <img src="./Swiper demo_files/nature-6.jpg">
+          </div>
+          <div class="swiper-slide" data-swiper-slide-index="6" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="7 / 10">
+            <img src="./Swiper demo_files/nature-7.jpg">
+          </div>
+          <div class="swiper-slide" data-swiper-slide-index="7" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="8 / 10">
+            <img src="./Swiper demo_files/nature-8.jpg">
+          </div>
+          <div class="swiper-slide" data-swiper-slide-index="8" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="9 / 10">
+            <img src="./Swiper demo_files/nature-9.jpg">
+          </div>
+          <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="9" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="10 / 10">
+            <img src="./Swiper demo_files/nature-10.jpg">
+          </div>
+          <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-thumb-active" data-swiper-slide-index="0" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="1 / 10">
+            <img src="./Swiper demo_files/nature-1.jpg">
+          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="2 / 10">
+            <img src="./Swiper demo_files/nature-2.jpg">
+          </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="3 / 10">
+            <img src="./Swiper demo_files/nature-3.jpg">
+          </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 157.75px; margin-right: 10px;" role="group" aria-label="4 / 10">
+            <img src="./Swiper demo_files/nature-4.jpg">
+          </div></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+      </div>
+
+      <!-- Swiper JS -->
+      <script src="./Swiper demo_files/swiper-bundle.min.js.Без названия"></script>
+
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          loop: true,
+          spaceBetween: 10,
+          slidesPerView: 4,
+          freeMode: true,
+          watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+          loop: true,
+          spaceBetween: 10,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          thumbs: {
+            swiper: swiper,
+          },
+        });
+      </script>
+
+
+      <!----></body></html>
