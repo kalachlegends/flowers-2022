@@ -1494,6 +1494,11 @@ body {
   transition: all 0.5s;
 }
 
+[data-animate=opacity] {
+  background: black;
+  opacity: 0.2;
+}
+
 .mySwiper .swiper-slide.swiper-slide-active [data-animate] {
   opacity: 1;
   -webkit-transform: none;
@@ -2560,16 +2565,6 @@ body {
   font-weight: 300;
   line-height: 29px;
 }
-@media (max-width: 767px) {
-  .flowers-cart__title {
-    font-size: calc(14px + 10.2 * ((100vw - 320px) / 1280));
-  }
-}
-@media (min-width: 767px) {
-  .flowers-cart__title {
-    font-size: calc(14px + 6 * (100vw / 1280));
-  }
-}
 
 /*footer-start-------------------------------------------------------------------------------------------------------------------------------------------*/
 .footer {
@@ -3102,12 +3097,12 @@ body {
 }
 @media (max-width: 767px) {
   .button-white span {
-    font-size: calc(13px + 3.4 * ((100vw - 320px) / 1280));
+    font-size: calc(11px + 6.8 * ((100vw - 320px) / 1280));
   }
 }
 @media (min-width: 767px) {
   .button-white span {
-    font-size: calc(13px + 2 * (100vw / 1280));
+    font-size: calc(11px + 4 * (100vw / 1280));
   }
 }
 @media (max-width: 420px) {
@@ -3750,6 +3745,7 @@ body {
 @media (max-width: 850px) {
   .product-main__slider {
     width: 100%;
+    margin-bottom: 0px;
   }
 }
 .product-main__slider .mySwiper1 .swiper-slide-thumb-active {
@@ -3792,6 +3788,15 @@ body {
 .product-main__slider .mySwiper2 {
   height: 80%;
   width: 100%;
+}
+.product-main__slider .mySwiper2 .swiper-slide.swiper-slide-active[data-animate] {
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media (max-width: 850px) {
   .product-main__slider .mySwiper2 {
@@ -3972,26 +3977,53 @@ body {
 
 .title-main {
   font-family: Montserrat;
-  font-size: 24px;
   font-weight: 600;
   line-height: 29px;
   letter-spacing: 0.07em;
   text-align: left;
 }
+@media (max-width: 767px) {
+  .title-main {
+    font-size: calc(20px + 6.8 * ((100vw - 320px) / 1280));
+  }
+}
+@media (min-width: 767px) {
+  .title-main {
+    font-size: calc(20px + 4 * (100vw / 1280));
+  }
+}
 
 .sub-title-main {
   font-family: Montserrat;
-  font-size: 16px;
   font-weight: 300;
   line-height: 20px;
   letter-spacing: 0.07em;
   text-align: left;
 }
+@media (max-width: 767px) {
+  .sub-title-main {
+    font-size: calc(12px + 6.8 * ((100vw - 320px) / 1280));
+  }
+}
+@media (min-width: 767px) {
+  .sub-title-main {
+    font-size: calc(12px + 4 * (100vw / 1280));
+  }
+}
 
 .options {
   width: 70%;
-  font-size: 15px;
   line-height: 18px;
+}
+@media (max-width: 767px) {
+  .options {
+    font-size: calc(13px + 3.4 * ((100vw - 320px) / 1280));
+  }
+}
+@media (min-width: 767px) {
+  .options {
+    font-size: calc(13px + 2 * (100vw / 1280));
+  }
 }
 @media (max-width: 500px) {
   .options {
@@ -4148,7 +4180,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   font-family: Montserrat;
-  font-size: 20px;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.07em;
@@ -4156,14 +4187,18 @@ body {
   color: #00f436;
   margin-bottom: 20px;
 }
+@media (max-width: 767px) {
+  .stock {
+    font-size: calc(16px + 6.8 * ((100vw - 320px) / 1280));
+  }
+}
+@media (min-width: 767px) {
+  .stock {
+    font-size: calc(16px + 4 * (100vw / 1280));
+  }
+}
 .stock__image {
   margin-right: 10px;
-  margin-bottom: 25px;
-}
-@media (max-width: 500px) {
-  .stock__image {
-    display: none;
-  }
 }
 
 .number {
@@ -4185,6 +4220,11 @@ body {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   fill: #484241;
+}
+@media (max-width: 500px) {
+  .number svg {
+    width: 15px;
+  }
 }
 .number svg:hover {
   -webkit-transition: all 0.4s;
@@ -4210,9 +4250,18 @@ body {
 .number-link {
   margin-bottom: 7px;
   font-family: Montserrat;
-  font-size: 16px;
   font-weight: 600;
   line-height: 20px;
   letter-spacing: 0.22em;
   text-align: center;
+}
+@media (max-width: 767px) {
+  .number-link {
+    font-size: calc(12px + 6.8 * ((100vw - 320px) / 1280));
+  }
+}
+@media (min-width: 767px) {
+  .number-link {
+    font-size: calc(12px + 4 * (100vw / 1280));
+  }
 }
