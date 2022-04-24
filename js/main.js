@@ -12,6 +12,18 @@ $(document).ready(function() {
  });
 });
 $(document).ready(function() {
+ $('.mobile__item-triger-1').click(function(){ //при клике на бургер что дожно происхоидть
+ 	 if ($('.mobile__list-1').hasClass('one')) {
+ 	 	$('.mobile__item-triger-1').not($(this)).removeClass('active-mobile-sub-menu-1')
+ 	 	$('.mobile__sub-menu-1').not($(this).next()).slideUp()
+ 	 }
+ 	$(this).toggleClass('active-mobile-sub-menu-1').next('.mobile__sub-menu-1').slideToggle();//когда человек будет нажажимать элемент с классом mobile__item-triger будет появляться элемент с классом mobile__sub-menu
+ 
+ });
+});
+
+
+$(document).ready(function() {
  $('.item-triger').click(function(){ //при клике на бургер что дожно происхоидть
  	 if ($('.footer__title').hasClass('active-sub-menu')) {
  	 	$('.item-triger').not($(this)).removeClass('active-sub-menu')
@@ -475,7 +487,12 @@ $(document).ready(function() {
  	$('body').toggleClass('lock');
  });
 });
-
+$(document).ready(function() {
+ $('.filter-toogle,.filters-menu-close,.close-menu-filters').click(function(event){ //при клике на бургер что дожно происхоидть
+ 	$('.filters-menu,.filters-menu-close,.close-menu-filters,.filters-menu-close').toggleClass('active');//когда человек будет нажажимать на бургер будет добавляться класс active
+ 	$('body').toggleClass('lock');
+ });
+});
 var swiper = new Swiper('.mySwiper', {
   navigation: {
           nextEl: ".swiper-button-next-swiper",
